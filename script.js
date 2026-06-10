@@ -84,7 +84,7 @@ function getImageSource(name) {
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/[,'!?]/g, "")
         .replace(/\./g, "")
-        .replace(/[-:/]/g, "_")
+        .replace(/[-:;/]/g, "_")
         .replace(/\s+/g, "_") + ".png";
 }
 
@@ -97,7 +97,7 @@ function Element(name, platform, genre, theme, summary) {
 }
 
 // *****************************************************************
-// ******************** Last Update on 08/06/26 ********************
+// ******************** Last Update on 10/06/26 ********************
 // *****************************************************************
 
 const data = [
@@ -189,7 +189,7 @@ const data = [
     new Element("And You Thought There Is Never a Girl Online?", "Crunchyroll", "Comédie - Romance", "MMO - Internet - Réalité", "Un joueur découvre que sa guilde est composée de camarades de classe féminines."),
     new Element("Monthly Girls' Nozaki-kun", "Streaming", "Comédie - Romance", "Manga - École - Malentendus", "Une lycéenne aide un mangaka sans savoir qu’il dessine des shojos romantiques."),
     new Element("Girls beyond the Youth Koya", "Streaming", "Romance - Slice of Life", "Jeunesse - Amitié - Nostalgie", "Un groupe de jeunes explore leurs relations et leurs rêves."),
-    new Element("Yakuza Fiancé: Raise wa Tanin ga Ii", "Crunchyroll", "Romance - Drame - Thriller", "Yakuza - Mariage arrangé - Violence", "Une fille se retrouve fiancée à un héritier de clan yakuza violent et imprévisible."),
+    new Element("Yakuza Fiance: Raise wa Tanin ga Ii", "Crunchyroll", "Romance - Drame - Thriller", "Yakuza - Mariage arrangé - Violence", "Une fille se retrouve fiancée à un héritier de clan yakuza violent et imprévisible."),
     new Element("Skilled Teaser Takagi-san", "Crunchyroll", "Comédie - Romance - Slice of Life", "École - Taquinerie - Amour", "Une fille passe son temps à taquiner un garçon qu’elle aime secrètement."),
     new Element("Astro Note", "Crunchyroll", "Romance - Science-fiction - Comédie", "Extraterrestres - Pension - Mystère", "Un homme découvre que sa colocataire cache un secret extraterrestre."),
     new Element("Maid Sama", "Streaming", "Romance - Comédie", "Serveuse - École - Secret", "Une présidente d’école travaille secrètement dans un maid café."),
@@ -247,5 +247,61 @@ const data = [
     new Element("Lost in Starlight", "Netflix", "Romance - Science-fiction - Drame", "Espace - Distance - Amour", "Une histoire d’amour entre deux personnes séparées par l’espace et la carrière spatiale."),
     new Element("Nerawareta Gakuen", "Streaming", "Romance - Science-fiction - Surnaturel", "École - Contrôle mental - Adolescence", "Des élèves sont soumis à un étrange phénomène de manipulation mentale dans leur école."),
     new Element("I want to let you know that I love you", "Streaming", "Romance - Drame - Slice of Life", "Confession - Adolescence - Relations", "Des lycéens vivent des émotions fortes autour de l’amour non exprimé et des confessions."),
-    new Element("Cosmic Princess Kaguya!", "Netflix", "Science-fiction - Comédie - Musical", "Idols - Espace - Parodie", "Une version futuriste et décalée du conte de Kaguya dans un univers spatial et musical.")
+    new Element("Cosmic Princess Kaguya!", "Netflix", "Science-fiction - Comédie - Musical", "Idols - Espace - Parodie", "Une version futuriste et décalée du conte de Kaguya dans un univers spatial et musical."),
+    new Element("Killed again, Mr. Detective", "Crunchyroll", "Mystère - Comédie - Surnaturel", "Détective - Résurrection - Enquête", "Un détective immortel continue de résoudre des affaires malgré ses morts répétées."),
+    new Element("Even a Replica Can Fall in Love", "Crunchyroll", "Romance - Science-fiction", "Clone - Identité - Amour", "Une copie artificielle développe des sentiments humains et remet en question son existence."),
+    new Element("Sword Art Online : Film suivant", "Streaming", "Action - Fantasy - Science-fiction - Isekai", "Réalité virtuelle - Jeu - Survie", "Les joueurs affrontent de nouveaux dangers dans un univers virtuel toujours plus complexe.", "ISEKAI"),
+    new Element("Rascal Does Not Dream of Bunny Girl Senpai", "Crunchyroll", "Romance - Drame - Surnaturel", "Adolescence - Syndrome - Relations", "Un lycéen aide des filles touchées par des phénomènes surnaturels liés à leurs émotions."),
+    new Element("Rent-A-Girlfriend", "Crunchyroll", "Romance - Comédie", "Relation fictive - Mensonge - Amour", "Un étudiant loue une petite amie et se retrouve piégé dans une relation compliquée.", "ECCHI léger"),
+    new Element("Kaguya-sama - Love is War", "Crunchyroll", "Comédie - Romance - Psychologique", "Orgueil - Stratégie - Amour", "Deux génies refusent d’avouer leurs sentiments et transforment l’amour en guerre mentale."),
+    new Element("Princesse Mononoké", "Netflix", "Fantasy - Aventure - Drame", "Nature - Dieux - Conflit", "Un jeune homme se retrouve au cœur d’un conflit entre humains et esprits de la forêt."),
+    new Element("Le Château dans le Ciel", "Netflix", "Aventure - Fantasy", "Technologie - Voyage - Mystère", "Deux enfants recherchent une cité volante légendaire convoitée par des forces militaires."),
+    new Element("Kiki la Petite Sorcière", "Netflix", "Fantasy - Slice of Life", "Indépendance - Travail - Croissance", "Une jeune sorcière commence une nouvelle vie seule en ville."),
+    new Element("Mon Voisin Totoro", "Netflix", "Fantasy - Slice of Life", "Enfance - Nature - Famille", "Deux sœurs rencontrent des esprits bienveillants dans la campagne japonaise."),
+    new Element("The Rising of the Shield Hero", "Crunchyroll & Netflix", "Action - Fantasy - Isekai", "Invocation - Trahison - Héros", "Un héros invoqué est trahi et doit reconstruire sa réputation.", "ISEKAI"),
+    new Element("The Wrong Way to Use Healing Magic", "Crunchyroll", "Action - Fantasy - Comédie - Isekai", "Magie - Entraînement - Guerre", "Un étudiant invoqué apprend à utiliser une magie de soin de façon extrême.", "ISEKAI"),
+    new Element("Jack-of-All-Trades, Party of None", "Crunchyroll", "Fantasy - Aventure", "Polyvalence - Groupe - Progression", "Un aventurier touche-à-tout cherche sa place dans un monde de quêtes."),
+    new Element("Terror Man", "Streaming", "Action - Psychologique - Thriller", "Terrorisme - Justice - Vision", "Un homme utilise ses visions du futur pour commettre des actes terroristes afin d’éviter des catastrophes."),
+    new Element("Armed Girl's Machiavellism", "Streaming", "Action - Comédie", "École - Combat - Domination", "Un élève rebelle affronte des filles armées contrôlant son école.", "ECCHI"),
+    new Element("Gosick", "Streaming", "Mystère - Drame - Historique", "Enquête - Europe - Duo", "Une génie excentrique résout des affaires complexes avec son partenaire."),
+    new Element("The Faraway Paladin", "Crunchyroll", "Fantasy - Aventure - Isekai", "Réincarnation - Dieux - Destin", "Un enfant élevé par des morts-vivants grandit pour devenir un héros.", "ISEKAI"),
+    new Element("What God Does in a World Without Gods", "Crunchyroll", "Fantasy - Isekai - Action", "Religion - Pouvoir - Révolution", "Un garçon réincarné introduit la religion dans un monde sans dieux.", "ISEKAI"),
+    new Element("Plunderer", "Crunchyroll", "Action - Fantasy", "Comptes - Guerre - Secret", "Dans un monde régi par des chiffres, un guerrier cache un passé sombre.", "ECCHI"),
+    new Element("Erased", "Streaming", "Mystère - Drame - Thriller", "Voyage temporel - Enfants - Crime", "Un homme remonte dans le temps pour empêcher un meurtre d’enfants."),
+    new Element("Cowboy Bebop", "Netflix", "Action - Science-fiction - Drame", "Espace - Chasseurs de primes - Solitude", "Un groupe de chasseurs de primes parcourt l’espace en poursuivant des criminels."),
+    new Element("Samurai Champloo", "Streaming", "Action - Aventure", "Samouraïs - Voyage - Style", "Deux guerriers accompagnent une jeune fille dans une quête à travers le Japon."),
+    new Element("AICO Incarnation", "Netflix", "Science-fiction - Action", "IA - Mutation - Futur", "Une jeune fille découvre son lien avec un accident biologique massif."),
+    new Element("The Elusive Samurai", "Crunchyroll", "Historique - Action", "Fuite - Guerre - Survie", "Un jeune seigneur en fuite apprend à survivre et à reprendre son pouvoir."),
+    new Element("Secrets of the Silent Witch", "Crunchyroll", "Fantasy - École", "Magie - Secret - Discrétion", "Une sorcière surpuissante cache ses capacités en infiltrant une académie."),
+    new Element("Clevatess - The King of Devil Beast, The baby, and The Brave of Undead", "Crunchyroll", "Fantasy - Drame - Action", "Monstre - Humanité - Protection", "Un roi démon doit protéger un bébé humain dans un monde hostile."),
+    new Element("Petals of Reincarnation", "Streaming", "Action - Surnaturel", "Réincarnation - Pouvoirs - Combat", "Des individus héritent des capacités de figures historiques réincarnées."),
+    new Element("Akane-banashi", "Netflix", "Drame - Slice of Life", "Art - Rakugo - Héritage", "Une jeune fille veut devenir conteuse pour venger son père."),
+    new Element("Monster", "Netflix", "Psychologique - Thriller", "Serial killer - Médecine - Morale", "Un chirurgien poursuit un tueur qu’il a sauvé autrefois."),
+    new Element("Steins;Gate", "Streaming", "Science-fiction - Thriller", "Voyage temporel - Paradoxe - Science", "Un groupe d’amis découvre comment envoyer des messages dans le passé."),
+    new Element("Gintama", "Streaming", "Comédie - Action - Science-fiction", "Parodie - Samouraïs - Aliens", "Un samouraï paresseux vit dans un Japon envahi par des extraterrestres."),
+    new Element("Fujimoto Tatsuki 17-26", "Streaming", "Drame - Psychologique", "Création - Violence - Humanité", "Recueil d’histoires explorant des thèmes sombres et humains."),
+    new Element("Lycoris Recoil", "Crunchyroll", "Action - Slice of Life", "Agents - Terrorisme - Duo", "Des jeunes agents secrets protègent le Japon en secret."),
+    new Element("Bocchi the Rock!", "Crunchyroll", "Comédie - Musique - Slice of Life", "Groupe - Anxiété sociale - Amitié", "Une fille timide rejoint un groupe de rock pour changer sa vie."),
+    new Element("Demon Lord 2099", "Crunchyroll", "Science-fiction - Fantasy", "Futur - Démon - Technologie", "Un roi démon renaît dans un futur cyberpunk."),
+    new Element("Dead Mount Death Play", "Crunchyroll", "Action - Surnaturel - Isekai", "Réincarnation - Crime - Magie", "Un nécromancien se réincarne dans le monde moderne.", "ISEKAI"),
+    new Element("Guilty Crown", "Streaming", "Action - Science-fiction - Drame", "Virus - Rébellion - Pouvoir", "Un étudiant obtient un pouvoir spécial au cœur d’une guerre."),
+    new Element("Seraph of the End", "Streaming", "Action - Surnaturel", "Vampires - Armée - Vengeance", "Des humains luttent contre des vampires après une catastrophe."),
+    new Element("Rock is a lady's modesty", "Streaming", "Musique - Slice of Life", "Rock - École - Identité", "Des jeunes filles explorent leur passion pour la musique rock."),
+    new Element("Akudama Drive", "Crunchyroll", "Action - Science-fiction - Thriller", "Criminels - Futur - Chaos", "Des criminels d’élite exécutent des missions dangereuses dans une société dystopique."),
+    new Element("Gurren Lagann", "Streaming", "Action - Mecha - Science-fiction", "Rébellion - Robots - Surpassement", "Des humains combattent pour la liberté à l’aide de robots géants."),
+    new Element("Radiant", "Crunchyroll", "Fantasy - Aventure", "Sorciers - Monstres - Quête", "Un jeune sorcier cherche l’origine des créatures qui attaquent les humains."),
+    new Element("Drifters", "Streaming", "Action - Fantasy - Isekai", "Héros historiques - Guerre - Monde parallèle", "Des figures historiques sont transportées dans un autre monde pour combattre.", "ISEKAI"),
+    new Element("Rage of Bahamut: Genesis", "Streaming", "Fantasy - Aventure", "Dieux - Démons - Chasseurs", "Des chasseurs de primes s’impliquent dans une guerre divine."),
+    new Element("Blade of the Immortal", "Streaming", "Action - Historique", "Samouraï - Immortalité - Vengeance", "Un guerrier immortel aide une jeune fille à se venger."),
+    new Element("K Project", "Streaming", "Action - Surnaturel", "Pouvoirs - Clans - Identité", "Des groupes dotés de pouvoirs s’affrontent pour le contrôle."),
+    new Element("Li'l Miss Vampire Can't Suck Right", "Crunchyroll", "Comédie - Surnaturel - Romance", "Vampire - École - Maladresse", "Une vampire incapable de boire du sang vit des situations absurdes."),
+    new Element("Dusk Beyond the End of the World", "Streaming", "Fantasy - Drame", "Fin du monde - Voyage - Mélancolie", "Un monde en déclin est exploré par des personnages en quête de sens."),
+    new Element("Seikoku no DragonarThe", "Streaming", "Fantasy - Romance", "Dragons - École - Lien", "Un étudiant devient partenaire d’un dragon humanoïde.", "ECCHI"),
+    new Element("Welcome to the NHK", "Streaming", "Psychologique - Drame", "Isolement - Société - Otaku", "Un hikikomori tente de sortir de son isolement avec l’aide d’une mystérieuse fille."),
+    new Element("Fireworks", "Streaming", "Romance - Drame - Surnaturel", "Temps - Adolescence - Choix", "Des adolescents rejouent un moment clé pour changer leur destin."),
+    new Element("Summer Ghost", "Streaming", "Drame - Surnaturel", "Mort - Jeunesse - Mystère", "Trois adolescents rencontrent un fantôme d’été lié à leurs problèmes."),
+    new Element("Loin de moi, près de toi", "Netflix", "Romance - Drame - Surnaturel", "Distance - Communication - Amour", "Deux personnes séparées par le temps communiquent et développent des sentiments."),
+    new Element("Maquia: When the Promised Flower Blooms", "Streaming", "Fantasy - Drame", "Immortalité - Maternité - Guerre", "Une jeune fille immortelle élève un enfant humain dans un monde en guerre."),
+    new Element("7Fates: Chakho", "Streaming", "Action - Fantasy", "Monstres - Chasse - Urbain", "Un groupe combat des créatures surnaturelles dans une ville moderne."),
+    new Element("Jun, la voix du coeur", "Streaming", "Drame - Romance", "Trauma - Expression - Jeunesse", "Une fille incapable de parler retrouve sa voix à travers la musique.")
 ]
